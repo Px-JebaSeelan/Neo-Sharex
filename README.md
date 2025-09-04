@@ -317,6 +317,3 @@ MIT License. See [LICENSE](LICENSE) for details.
 ---
 
 > Made with ❤️ for seamless, private sharing.
-#   N e o - S h a r e x 
- 
- 
