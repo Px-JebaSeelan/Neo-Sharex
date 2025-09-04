@@ -1,0 +1,20 @@
+.file-dropzone {
+  border: 2px dashed var(--glass-border, #ccc);
+  border-radius: 15px;
+  padding: 2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1.5rem;
+  background: rgba(255,255,255,0.02);
+}
+
+.file-dropzone.active {
+  border-color: var(--color-secondary, #00e5ff);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.5);
+  transform: scale(1.02);
+}
+
+.file-dropzone p {
+  color: var(--color-text-dark, #a0a0a0);
+}

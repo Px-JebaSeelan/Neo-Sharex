@@ -1,0 +1,60 @@
+/* === index.css === */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+  /* Switched to Poppins for a cleaner, more professional feel */
+  --primary-font: 'Poppins', sans-serif;
+  --heading-font: 'Poppins', sans-serif; 
+  /* Using Orbitron specifically for codes/numbers */
+  --code-font: 'Orbitron', sans-serif;
+
+  --color-bg: #0d0c1d;
+  --color-primary: #8a2be2; /* BlueViolet */
+  --color-secondary: #00e5ff; /* Bright Cyan */
+  --color-tertiary: #f900ff; /* Bright Magenta */
+  --color-text: #f0f0f0;
+  --color-text-dark: #a0a0a0;
+
+  --glass-bg: rgba(22, 22, 42, 0.45);
+  --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--primary-font);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+  overflow-x: hidden;
+
+  background: linear-gradient(-45deg, #0d0c1d, #1f1c3b, #3c1c4d, #1a0d1d);
+  background-size: 400% 400%;
+  animation: gradientBG 18s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.3);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-secondary);
+}

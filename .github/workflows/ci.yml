@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use Node.js 18
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+      - name: Install dependencies
+        run: npm install
+      - name: Lint
+        run: npm run lint --if-present
+      - name: Format
+        run: npm run format --if-present
+      - name: Run unit tests
+        run: npm test --if-present
+      - name: Audit dependencies
+        run: npm audit --audit-level=high || true
+      - name: Build
+        run: npm run build
+      # Uncomment below to deploy to Firebase Hosting automatically
+      # - name: Deploy to Firebase Hosting
+      #   uses: w9jds/firebase-action@v13
+      #   with:
+      #     args: deploy --only hosting
+      #   env:
+      #     FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
